@@ -1,0 +1,32 @@
+.container {
+  background-color: rgb(13, 20, 53);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  .drop-wrapper {
+    border: 1px solid red;
+    padding: 1rem;
+    align-items: flex-end;
+    position: relative;
+    width: 10%;
+
+    p {
+      color: aliceblue;
+    }
+    &:hover {
+      background-color: red;
+    }
+
+    .drop {
+      width: 100%;
+      border: 1px solid yellow;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      li {
+        color: aliceblue;
+      }
+    }
+  }
+}

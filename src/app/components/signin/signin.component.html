@@ -1,0 +1,16 @@
+<div>
+  <h1>Firebase Auth</h1>
+  <form [formGroup]="user">
+    <div>
+      <label for="">Email</label>
+      <input type="text" name="" id="email" formControlName="email" />
+    </div>
+    <div>
+      <label for="">Password</label>
+      <input type="password" name="" id="password" formControlName="password" />
+    </div>
+    <button (click)="signIn()">Sign in</button>
+    <button *ngIf="signedIn" (click)="signOut()">Sign out</button>
+  </form>
+  <p *ngIf="invalid">Invalid login credentials, try again</p>
+</div>

@@ -1,0 +1,25 @@
+<div>
+  <h1>Create an account</h1>
+  <div>
+    <form [formGroup]="newUser">
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" />
+      </div>
+      <div>
+        <label for="confirm-password">Confirm password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          formControlName="confirmPassword"
+        />
+      </div>
+    </form>
+    <button (click)="signUp()">Sign up</button>
+    <button>Cancel</button>
+  </div>
+</div>
