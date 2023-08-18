@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './components/signin/signin.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { HeadComponent } from './components/head/head.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeadComponent } from './components/head/head.component';
     SignupComponent,
     LandingComponent,
     HeadComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,

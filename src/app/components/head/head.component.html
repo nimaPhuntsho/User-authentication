@@ -1,9 +1,9 @@
 <div class="container">
   <div class="drop-wrapper">
-    <p>Account</p>
-    <div class="drop">
-      <li>Sign in</li>
-      <li>Sign up</li>
+    <p (click)="showMenu()">Account</p>
+    <div *ngIf="show" class="drop">
+      <li (click)="clearMenu()" routerLink="/signin">Sign in</li>
+      <li (click)="clearMenu()" routerLink="/signup">Sign up</li>
     </div>
   </div>
 </div>

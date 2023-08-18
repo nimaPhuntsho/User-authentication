@@ -1,20 +1,25 @@
-import { SigninComponent } from './components/signin/signin.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { AccountComponent } from "./components/account/account.component";
+import { SigninComponent } from "./components/signin/signin.component";
+import { SignupComponent } from "./components/signup/signup.component";
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: SigninComponent,
   },
   {
-    path: 'signup',
+    path: "signup",
     component: SignupComponent,
   },
   {
-    path: 'signin',
+    path: "signin",
     component: SigninComponent,
+  },
+  {
+    path: "account",
+    component: AccountComponent,
   },
 ];
 

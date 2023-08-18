@@ -3,12 +3,12 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   signInWithEmailAndPassword,
-} from '@angular/fire/auth';
-import { inject, Injectable } from '@angular/core';
-import { FirebaseApp } from '@angular/fire/app';
+} from "@angular/fire/auth";
+import { inject, Injectable } from "@angular/core";
+import { FirebaseApp } from "@angular/fire/app";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class AuthService {
   constructor(private fs: Auth) {}
@@ -31,6 +31,7 @@ export class AuthService {
       email,
       password
     );
+    const currentUser = await userCredentials.user;
   }
 
   signOut() {

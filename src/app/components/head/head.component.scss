@@ -3,29 +3,34 @@
   padding: 2rem;
   display: flex;
   justify-content: space-between;
+  margin: 0;
 
   .drop-wrapper {
-    border: 1px solid red;
-    padding: 1rem;
     align-items: flex-end;
     position: relative;
     width: 10%;
 
     p {
       color: aliceblue;
-    }
-    &:hover {
-      background-color: red;
+      padding: 1rem;
+      &:hover {
+        background-color: red;
+        cursor: pointer;
+      }
     }
 
     .drop {
       width: 100%;
-      border: 1px solid yellow;
       position: absolute;
       top: 100%;
-      left: 0%;
+      left: 0;
+      background-color: aliceblue;
       li {
-        color: aliceblue;
+        padding: 1rem 0 1rem 1rem;
+        &:hover {
+          background-color: bisque;
+          cursor: pointer;
+        }
       }
     }
   }

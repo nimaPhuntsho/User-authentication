@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth.service';
+import { Component } from "@angular/core";
+import { FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
+import { AuthService } from "src/app/auth.service";
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss'],
+  selector: "app-signin",
+  templateUrl: "./signin.component.html",
+  styleUrls: ["./signin.component.scss"],
 })
 export class SigninComponent {
   constructor(
@@ -19,19 +19,20 @@ export class SigninComponent {
   signedIn = false;
 
   user = this.fb.group({
-    email: [''],
-    password: [''],
+    email: [""],
+    password: [""],
   });
 
   async signIn() {
     this.invalid = false;
-    let email = this.user.controls['email'].value;
-    let password = this.user.controls['password'].value;
+    let email = this.user.controls["email"].value;
+    let password = this.user.controls["password"].value;
     if (email && password) {
       await this.auth
         .signIn(email, password)
         .then((user) => {
           this.signedIn = true;
+          this.router.navigate(["account"]);
         })
         .catch((error) => {
           this.invalid = true;
