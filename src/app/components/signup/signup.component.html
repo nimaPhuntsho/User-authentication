@@ -1,16 +1,16 @@
-<div>
-  <h1>Create an account</h1>
-  <div>
+<div class="container-fluid">
+  <div class="card">
+    <h1>Create an account</h1>
     <form [formGroup]="newUser">
-      <div>
+      <div class="elements">
         <label for="email">Email</label>
         <input type="text" id="email" formControlName="email" />
       </div>
-      <div>
+      <div class="elements">
         <label for="password">Password</label>
         <input type="password" id="password" formControlName="password" />
       </div>
-      <div>
+      <div class="elements">
         <label for="confirm-password">Confirm password</label>
         <input
           type="password"
@@ -19,7 +19,15 @@
         />
       </div>
     </form>
-    <button (click)="signUp()">Sign up</button>
-    <button>Cancel</button>
+    <div class="btn-wrapper">
+      <button class="btn btn-dark" (click)="signUp()">Sign up</button>
+      <button class="btn btn-dark">Cancel</button>
+      <p class="error" *ngIf="invalid">
+        Something went wrong, try again, ensure passwords match
+      </p>
+      <p class="message" *ngIf="success">
+        Great! you have successfully signed up
+      </p>
+    </div>
   </div>
 </div>

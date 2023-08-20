@@ -1,5 +1,11 @@
-<div>
-  <div>
-    <button (click)="signOut()">Sign out</button>
+<div class="container-fluid">
+  <div class="wrapper">
+    <div>
+      <h1>Welcome</h1>
+      <p>{{ dispplayEmail | async }}</p>
+    </div>
+    <div>
+      <button class="btn btn-dark" (click)="signOut()">Sign out</button>
+    </div>
   </div>
 </div>

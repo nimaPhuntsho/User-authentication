@@ -1,22 +1,24 @@
-.container {
+.container-fluid {
   background-color: rgb(13, 20, 53);
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
+  padding: 0;
 
   .drop-wrapper {
     align-items: flex-end;
     position: relative;
     width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: red;
+      cursor: pointer;
+    }
 
     p {
       color: aliceblue;
       padding: 1rem;
-      &:hover {
-        background-color: red;
-        cursor: pointer;
-      }
+      margin-bottom: 0;
     }
 
     .drop {
@@ -32,6 +34,9 @@
           cursor: pointer;
         }
       }
+    }
+    @media screen and (max-width: 480px) {
+      width: 40%;
     }
   }
 }

@@ -1,3 +1,4 @@
+import { AuthGuard } from "./auth.guard";
 import { AccountComponent } from "./components/account/account.component";
 import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path: "account",
     component: AccountComponent,
+    canActivate: [AuthGuard],
   },
 ];
 
